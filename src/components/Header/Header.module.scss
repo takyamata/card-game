@@ -1,0 +1,19 @@
+@use '@styles/mixin' as *;
+.root {
+    grid-area: header;
+    background-color: var(--header);
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+h1 {
+    @include font(f-32-bold, var(--base-dark));
+}
+.logo {
+    width: auto;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}

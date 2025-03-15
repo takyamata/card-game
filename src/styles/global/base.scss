@@ -1,0 +1,110 @@
+@use '@styles/mixin' as *;
+
+:global {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family: 'M PLUS 1', 'BIZ UDPGothic', 'メイリオ', Meiryo, sans-serif;
+    color: var(--black);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    @include font(f-24, var(--black));
+}
+.headline {
+    @include font(f-36-bold, var(--black));
+    border-bottom: 0.2rem solid var(--border);
+    margin-bottom: 2rem;
+    text-indent: -1em;
+}
+.subheading {
+    @include font(f-24-bold, var(--black));
+    line-height: 2.5;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+.lead {
+    @include font(f-20, var(--black));
+    line-height: 2.5;
+}
+.span {
+    display: block;
+    @include font(f-20, var(--black));
+    &.right {
+        text-align: right;
+    }
+    &.center {
+        text-align: center;
+    }
+    &:not(:first-of-type) {
+        margin-top: 3rem;
+    }
+}
+.paragraph {
+}
+a {
+    color: var(--current);
+    text-decoration: underline;
+    transition: var(--time-base) ease;
+    @include hover {
+        text-decoration: none;
+        color: var(--current-thin);
+    }
+    &:visited {
+        color: var(--visited);
+    }
+}
+.logo {
+    g {
+        &:not(:last-of-type) {
+            // fill: #3b3b6b;
+            fill: #3b3b6b;
+        }
+        &:last-of-type {
+            fill: var(--logo-red);
+        }
+    }
+}
+.f-12 {
+    @include font(f-12, var(--black));
+}
+.f-12-bold {
+    @include font(f-12-bold, var(--black));
+}
+.f-16 {
+    @include font(f-16, var(--black));
+}
+.f-16-bold {
+    @include font(f-16-bold, var(--black));
+}
+.f-20 {
+    @include font(f-20, var(--black));
+}
+.f-20-bold {
+    @include font(f-20-bold, var(--black));
+}
+.f-28 {
+    @include font(f-28, var(--black));
+}
+.f-28-bold {
+    @include font(f-28-bold, var(--black));
+}
